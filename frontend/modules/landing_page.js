@@ -33,7 +33,7 @@ function addCityToDOM(id, city, description, image) {
   const dataRow = document.querySelector(".content #data");
   const cityEl = document.createElement("a");
   cityEl.setAttribute("id",id);
-  cityEl.setAttribute("href",`adventures/?city=${id}`);
+  cityEl.setAttribute("href",`pages/adventures/?city=${id}`);
   cityEl.innerText = description;
   dataRow.append(cityEl);
 
