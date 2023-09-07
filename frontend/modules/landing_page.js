@@ -19,9 +19,9 @@ async function fetchCities() {
   // 1. Fetch cities using the Backend API and return the data
   try {
     const cities = await fetch(`${config.backendEndpoint}/cities`);
-    return cities.json();
+    const result=await cities.json();
+    return result;
   } catch (err) {
-    console.log(err);
     return null;
   }
 }
