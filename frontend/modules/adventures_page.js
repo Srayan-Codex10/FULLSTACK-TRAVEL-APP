@@ -17,7 +17,8 @@ async function fetchAdventures(city) {
     const cityAdv = await fetch(
       `${config.backendEndpoint}/adventures/?city=${city}`
     );
-    return cityAdv.json();
+    const res = await cityAdv.json();
+    return res;
   } catch (err) {
     return null;
   }
@@ -31,7 +32,7 @@ function addAdventureToDOM(adventures) {
   adventures.forEach((adv) => {
     const advLink = document.createElement("a");
     advLink.setAttribute("id", adv.id);
-    advLink.setAttribute("href", `detail/?adventure=${adv.id}}`);
+    advLink.setAttribute("href", `detail/?adventure=${adv.id}`);
     advLink.innerText = adv.name;
     advGridRow.appendChild(advLink);
   });
@@ -102,7 +103,7 @@ function getFiltersFromLocalStorage() {
 //Implementation of DOM manipulation to add the following filters to DOM :
 // 1. Update duration filter with correct value
 // 2. Update the category pills on the DOM
- 
+
 function generateFilterPillsAndUpdateDOM(filters) {
   // TODO: MODULE_FILTERS
   // 1. Use the filters given as input, update the Duration Filter value and Generate Category Pills
