@@ -52,7 +52,11 @@ function addBootstrapPhotoGallery(images) {
   // TODO: MODULE_ADVENTURE_DETAILS
   // 1. Add the details of the adventure to the HTML DOM
   galleryEl.innerHTML = "";
-  galleryEl.innerHTML += `<div class="carousel-indicators" id="slide-indicator"></div><div id="carousel-container" class="carousel-inner"></div>`;
+  let gridDiv = document.createElement("div");
+  gridDiv.className = "col-12";
+  gridDiv.id = "photo-grid-col";
+  galleryEl.appendChild(gridDiv);
+  gridDiv.innerHTML += `<div class="carousel-indicators mx-0" id="slide-indicator"></div><div id="carousel-container" class="carousel-inner"></div>`;
 
   let carouselButtons = `<button class="carousel-control-prev" type="button" data-bs-target="#photo-gallery" data-bs-slide="prev">
   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -84,7 +88,7 @@ function addBootstrapPhotoGallery(images) {
     div.appendChild(imgTag);
     carouselContainer.appendChild(div);
   });
-  document.getElementById("photo-gallery").innerHTML += carouselButtons;
+  gridDiv.innerHTML += carouselButtons;
   document
     .getElementById("carousel-container")
     .firstChild.classList.add("active");
