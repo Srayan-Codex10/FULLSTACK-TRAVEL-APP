@@ -56,7 +56,7 @@ function addBootstrapPhotoGallery(images) {
   gridDiv.className = "col-12";
   gridDiv.id = "photo-grid-col";
   galleryEl.appendChild(gridDiv);
-  gridDiv.innerHTML += `<div class="carousel-indicators mx-0" id="slide-indicator"></div><div id="carousel-container" class="carousel-inner"></div>`;
+  gridDiv.innerHTML += `<div class="carousel-indicators" id="slide-indicator"></div><div id="carousel-container" class="carousel-inner"></div>`;
 
   let carouselButtons = `<button class="carousel-control-prev" type="button" data-bs-target="#photo-gallery" data-bs-slide="prev">
   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
