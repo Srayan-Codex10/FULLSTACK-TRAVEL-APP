@@ -240,6 +240,7 @@ input[type="number"] {
   padding: 10px;
   white-space: nowrap;
   border-radius: 20px;
+  border: none;
   cursor: pointer;
 }
 .reservation-visit-button:hover {
