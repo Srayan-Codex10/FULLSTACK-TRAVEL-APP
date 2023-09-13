@@ -61,7 +61,7 @@ function addReservationToTable(reservations) {
       td_time.textContent = new Intl.DateTimeFormat('en-IN', { dateStyle: 'long' }).format(d) + ', ' + d.toLocaleTimeString("en-IN");
       let btn = document.createElement("button");
       let btnLink = document.createElement("a");
-      btnLink.href = `/frontend/pages/adventures/detail/?adventure=${reserv.adventure}`;
+      btnLink.href = `../detail/?adventure=${reserv.adventure}`;
       btnLink.textContent = "Visit Adventure";
       btn.className = "reservation-visit-button";
       btn.setAttribute("id", reserv.id);

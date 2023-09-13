@@ -37,7 +37,7 @@ function addCityToDOM(id, city, description, image) {
 
   // create bootstrap elements
   let gridElem = document.createElement("div");
-  gridElem.className = "col-sm-6 col-lg-3 mb-3";
+  gridElem.className = "col-6 col-lg-3 mb-2";
   let divTile = document.createElement("div");
   divTile.className = "tile";
   let tileText = document.createElement("div");
