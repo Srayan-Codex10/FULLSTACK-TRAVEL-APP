@@ -32,8 +32,18 @@ function addAdventureToDOM(adventures) {
     const advLink = document.createElement("a");
     advLink.setAttribute("id", adv.id);
     advLink.setAttribute("href", `detail/?adventure=${adv.id}`);
-    advLink.innerText = adv.name;
-    advGridRow.appendChild(advLink);
+
+    let gridDiv = document.createElement("div");
+    gridDiv.className = "col-6 col-lg-3 mb-2";
+    let divActivCard = document.createElement("div");
+    divActivCard.className = "activity-card";
+
+    let cardImage = document.createElement("img");
+    cardImage.src = adv.image;
+    divActivCard.appendChild(cardImage);
+    advLink.innerHTML = divActivCard.outerHTML;
+    gridDiv.appendChild(advLink);
+    advGridRow.appendChild(gridDiv);
   });
 }
 
