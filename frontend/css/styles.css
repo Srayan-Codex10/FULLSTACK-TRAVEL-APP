@@ -252,14 +252,20 @@ input[type="number"] {
   width: 100%;
 }
 #reservation-panel-sold-out {
+  display: none;
   border: solid 1px #eee;
   border-radius: 4px;
   padding: 16px;
   margin-bottom: 30px;
 }
 #reservation-panel-available {
+  display: none;
   border: solid 1px #eee;
   border-radius: 4px;
   padding: 16px;
   margin-bottom: 30px;
+}
+
+#no-reservation-banner {
+  display: none;
 }
